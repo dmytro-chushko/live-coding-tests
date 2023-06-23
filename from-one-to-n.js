@@ -8,7 +8,7 @@ const digitsFromOneTo = (n) => {
     arr.push(n > 0 ? i - 1 : i + 1);
   }
 
-  return arr.join(", ");
+  return n > 0 ? arr.sort((a, b) => a - b).join(", ") : arr.join(", ");
 };
 
 console.log(digitsFromOneTo(-10));

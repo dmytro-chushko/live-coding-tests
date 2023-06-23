@@ -8,3 +8,13 @@ const upperCaseIndices = (str) =>
   }, []);
 
 console.log(upperCaseIndices("UpperCaseIndices"));
+
+let x = 0;
+
+const plusOne = () => {
+  x++;
+  console.log(x);
+};
+
+plusOne();
+plusOne();
