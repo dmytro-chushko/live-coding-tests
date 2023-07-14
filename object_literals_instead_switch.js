@@ -24,7 +24,7 @@ function getDrink(type) {
 }
 
 function getDrink(type) {
-  var drinks = {
+  const drinks = {
     coke: function () {
       return "Coke";
     },
