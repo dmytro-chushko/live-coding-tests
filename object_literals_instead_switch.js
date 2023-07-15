@@ -1,5 +1,5 @@
 function getDrink(type) {
-  var drinks = {
+  const drinks = {
     coke: "Coke",
     pepsi: "Pepsi",
     lemonade: "Lemonade",
