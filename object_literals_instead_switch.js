@@ -43,7 +43,7 @@ var drink = getDrink("coke");
 console.log(drink);
 
 function getSnack(type) {
-  var snack;
+  let snack;
   function isDrink() {
     return (snack = "Drink");
   }
