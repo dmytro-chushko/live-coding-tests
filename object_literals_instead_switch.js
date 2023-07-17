@@ -50,7 +50,7 @@ function getSnack(type) {
   function isFood() {
     return (snack = "Food");
   }
-  var snacks = {
+  const snacks = {
     coke: isDrink,
     pepsi: isDrink,
     cookies: isFood,
