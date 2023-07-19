@@ -59,7 +59,7 @@ function getSnack(type) {
   return snacks[type]();
 }
 
-var snack = getSnack("coke");
+const snack = getSnack("coke");
 console.log(snack); // 'Drink'
 
 //https://ultimatecourses.com/blog/deprecating-the-switch-statement-for-object-literals
