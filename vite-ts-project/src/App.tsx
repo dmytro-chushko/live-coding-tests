@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Button } from "./Button";
 
 type CustomResponse<T> = {
   data: T;
@@ -40,6 +41,12 @@ function App() {
   const [greeting, setGreeting] = useState<string>("");
   const [result, isLoading] = useCustomeFetchQuery<string>(customFetch);
 
+  // const handleCount = () => setCount((count) => count + 1);
+
+  const handleCount = useCallback(() => setCount((count) => count + 1), []);
+
+  console.log("App update");
+
   useEffect(() => {
     if (result) {
       setGreeting(result.data);
@@ -59,9 +66,8 @@ function App() {
       <h1>Vite + React</h1>
       <p>{isLoading ? "...Loading" : greeting}</p>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Button increment={handleCount} />
+        <p>count is {count}</p>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
