@@ -8,5 +8,13 @@ export const Test: FC<ITestProps> = ({ value }) => {
   const [today, setToday] = useState<string>(value);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    first;
+
+    return () => {
+      second;
+    };
+  }, [third]);
+
   return <div>Test</div>;
 };
