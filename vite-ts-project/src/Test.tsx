@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 
 interface ITestProps {
   value: string;
@@ -16,5 +16,5 @@ export const Test: FC<ITestProps> = ({ value }) => {
     };
   }, [third]);
 
-  return <div>Test</div>;
+  return <div ref={containerRef}>Test</div>;
 };
