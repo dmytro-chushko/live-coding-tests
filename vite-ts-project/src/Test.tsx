@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from 'react';
 
 interface ITestProps {
   value: string;
